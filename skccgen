@@ -1,0 +1,62 @@
+<?php
+/*Color*/
+$verde = "\033[32m";
+$rojo = "\033[31m";
+$celeste = "\033[36m";
+$amarillo = "\033[33m";
+$morado = "\033[35m";
+$azul = "\033[34m";
+$plomo = "\033[30m";
+/*Form*/
+$date   = date('d-M-Y H:i');
+sleep(2);
+echo $rojo. "
+                     ┌─────────────────────┐
+                     │▞▀▖▌ ▌▞▀▖▞▀▖▞▀▖▛▀▘▙ ▌│
+                     │▚▄ ▙▞ ▌  ▌  ▌▄▖▙▄ ▌▌▌│
+                     │▖ ▌▌▝▖▌ ▖▌ ▖▌ ▌▌  ▌▝▌│
+                     │▝▀ ▘ ▘▝▀ ▝▀ ▝▀ ▀▀▘▘ ▘│
+                     └─────────────────────┘\n";
+sleep(1);
+echo " ★BY SKELLING OFICIAL\n";
+sleep(1);
+echo " ★GENERADOR DE CC VIP PRIVADO 100 FUNCIONAL\n";
+sleep(1);
+echo " ★SOMOS LA ElITE DE LA TECNOLOGIA\n";
+sleep(1);
+echo " ★UNETE AL SERVIDOR OFICIAL NUEVA ELITE OFICIAL\n";
+sleep(1);
+echo "★SUSCRIBETE AL CANAL DE YT: SKELLING OFICIAL [SK]\n"; 
+sleep(1);
+echo $amarillo. "\n————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————";
+
+//CANTIDAD DE CC
+
+echo $celeste . "\n\n★CANTIDAD DE CC A BUSCAR★ :  ";
+$count = trim(fgets(STDIN,1024));
+
+//GENERAR CC
+
+for($x = 0; $x < $count; $x++){
+$str = file_get_contents("http://namegenerators.org/fake-name-generator-us/");
+$var = '/<div class="col2">(.*?)<\/div>/s';
+preg_match_all($var, $str, $matches);
+
+// INFORMACION DE LA TARJETA
+
+sleep(5);
+echo "\033[33m%%%%%%%%%\033[34m%%%%%%%\033[31m%%%%%%\033[32m SKELLING OFICIAL \033[33m%%%%%%%%%\033[01;34m%%%%%%%\033[31m%%%%%%\n";
+echo "\033[33m%%%%%%%%%\033[34m%%%%%%%\033[31m%%%%%%\033[32m SK GEN VIP OFICIAL \033[33m%%%%%%%%%\033[01;34m%%%%%%%\033[31m%%%%%%\n";
+echo $rojo . "\n===================★INFORMACION DEL USUARIO★======================\n\n";
+echo $verde . "[NOMBRE : ".str_replace("</span>", "", str_replace('<span class="name">', "", $matches[1][3]))."]".
+		" \n[LUGAR : ".$matches[1][8]."]".
+		" \n[CORREO : ".$matches[1][10]."]".
+		" \n[TELEFONO : ".$matches[1][9]."]\n";
+echo $rojo . "====================== ★INFORMACION DE LA TARJETA★  =======================\n\n";
+echo $azul . " \n[TARJETA DE CREDITO : ".str_replace(" ", "", $matches[1][14])."]".
+		" \n[CVV : ".$matches[1][16]."]".
+		" \n[FECHA : ".$matches[1][15]."]\n\n";
+	sleep(5);
+}
+echo ">  ★FECHA DE GENERACION★ : " .$plomo .$date."\n";
+?>
